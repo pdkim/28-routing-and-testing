@@ -5,7 +5,8 @@ import App from '../../src/components/app.js';
 
 describe('<App/> (Enzyme Test)', () => {
   xit('should find home page', ()=> {
-    expect(null).toBeNull();
+    let app = shallow(<App />);
+    expect(app.find('nav').exists()).toBeTruthy();
   });
 
   xit('should find the dashboard page', () => {
